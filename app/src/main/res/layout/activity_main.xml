@@ -1,0 +1,186 @@
+<com.android.credassignment.MultiSheetView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/multi_sheet_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.coordinatorlayout.widget.CoordinatorLayout">
+
+    <FrameLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/welcome_text_view"
+            android:textSize="24sp">
+
+        </TextView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/sheet1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        app:behavior_peekHeight="64dp"
+        app:layout_behavior=".LockableBottomSheetBehavior"
+        tools:ignore="MissingPrefix">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/sheet1PeekView"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/background_button">
+
+                <TextView
+                    android:id="@+id/text_sheet1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/text_sheet_1"
+                    android:textColor="#fff"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sheet1Container"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginBottom="64dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:text="EMI Selection View"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/sheet1Coordinator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/sheet2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                app:behavior_peekHeight="64dp"
+                app:layout_behavior=".LockableBottomSheetBehavior">
+
+                <RelativeLayout
+                    android:id="@+id/sheet2PeekView"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="@drawable/background_button">
+
+                    <TextView
+                        android:id="@+id/text_sheet2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/text_sheet_2"
+                        android:textColor="#fff"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/sheet2Container"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_marginBottom="64dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif"
+                        android:text="Select you bank View"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:id="@+id/sheet2Coordinator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:id="@+id/sheet3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:orientation="vertical"
+                        app:behavior_peekHeight="64dp"
+                        app:layout_behavior=".LockableBottomSheetBehavior">
+
+                        <RelativeLayout
+                            android:id="@+id/sheet3PeekView"
+                            android:layout_width="match_parent"
+                            android:layout_height="64dp"
+                            android:background="@drawable/background_button">
+
+                            <TextView
+                                android:id="@+id/text_sheet3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:fontFamily="sans-serif"
+                                android:text="@string/text_sheet_3"
+                                android:textColor="#fff"
+                                android:textSize="24sp" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/sheet3Container"
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:fontFamily="sans-serif"
+                                android:text="KYC View"
+                                android:textSize="24sp" />
+                        </RelativeLayout>
+
+                    </FrameLayout>
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            </FrameLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </FrameLayout>
+</com.android.credassignment.MultiSheetView>

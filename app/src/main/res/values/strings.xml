@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CRED Assignment</string>
+    <string name="text_sheet_1">Proceed to EMI selection</string>
+    <string name="text_sheet_2">Select your bank account</string>
+    <string name="text_sheet_3">Tap for 1-click KYC</string>
+    <string name="welcome_text_view">Welcome View</string>
+</resources>
